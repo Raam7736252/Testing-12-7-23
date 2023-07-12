@@ -1,0 +1,22 @@
+pipeline
+{
+    agent any
+     stages
+      {
+         stage('scm Checkout')
+        {
+            steps
+            {
+                echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+                echo "Current Build number is $BUILD_NUMBER"
+                echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+                echo "Current buils id is $BUILD_ID"
+                echo "###########################################"
+                echo "Current Job Name is $JOB_NAME"
+                echo "|||||||||||||||||||||||||||||||||||||||||||"
+              
+            }
+
+        }
+      }
+}
