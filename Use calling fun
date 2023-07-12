@@ -1,0 +1,35 @@
+def GitSource()
+         {
+            git branch: 'main', credentialsId: '1caedbcb-2aa9-44bc-a870-11a792db9cc1' , url : 'https://github.com/Raam7736252/GIT08052023.git'
+
+         }
+pipeline
+{
+    agent any
+     stages
+      {
+        
+        stage('scm Checkout')
+        {
+            steps
+            {
+                script
+                {
+                    try
+                    {
+                        echo "===================================="
+                        echo "git cloning started"
+                        echo "++++++++++++++++++++++++++++++++++++"
+                        GitSource()
+                        
+                    }
+                    catch(Exception e)
+                    {
+                        echo "git cloning unsucessfully"
+                    }
+                }
+            }
+
+        }
+      }
+}
