@@ -14,10 +14,10 @@ pipeline
                         echo "===================================="
                         echo "git cloning started"
                         echo "++++++++++++++++++++++++++++++++++++"
-                        git branch: 'main' credentialsId: '1caedbcb-2aa9-44bc-a870-11a792db9cc1' url : 'https://github.com/Raam7736252/Testing-12-7-23.git'
+                        git branch: 'main', credentialsId: '1caedbcb-2aa9-44bc-a870-11a792db9cc1', url: 'https://github.com/Raam7736252/Testing-12-7-23.git'
 
                     }
-                    catch(Expention e)
+                    catch(Exception e)
                     {
                         echo "git cloning unsucessfully"
                     }
